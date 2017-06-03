@@ -14,7 +14,7 @@ func FindMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 func find_kth(ss []int, m int, ls []int, n int, k int) int {
 
 	if m > n {
-		find_kth(ls, n, ss, m, k)
+		return find_kth(ls, n, ss, m, k)
 	}
 	if m == 0 {
 		return ls[k-1]
