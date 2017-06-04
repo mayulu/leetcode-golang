@@ -1,15 +1,14 @@
-package leetcode_mayulu
+package leetcode_go_mayulu
 
-func twoSum(nums []int, target int) []int {
-	var res []int
+func TwoSum(nums []int, target int) []int {
+	var result []int
 	for i := 0; i < len(nums); i++ {
 		for j := i + 1; j < len(nums); j++ {
 			if target-nums[i] == nums[j] {
 
-				res = append(res, i)
-				res = append(res, j)
-
-				return res
+				result = append(result, i)
+				result = append(result, j)
+				return result
 			}
 
 		}

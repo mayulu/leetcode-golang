@@ -23,3 +23,4 @@ import "leetcode_mayulu_go"
 3. LengthOfLongestSubstring(s string) int
 4. FindMedianSortedArrays(nums1 []int, nums2 []int) float64
 5. LongestPalindrome(s string) string
+6. Convert(s string, numRows int) string

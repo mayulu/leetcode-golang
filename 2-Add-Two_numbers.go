@@ -1,20 +1,23 @@
-package leetcode_mayulu
+package leetcode_go_mayulu
 
 type ListNode struct {
 	Val  int
 	Next *ListNode
 }
 
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+
 	var result *ListNode = nil
-	advance := 0
+	var previous *ListNode = nil
 
 	cl1 := l1
 	cl2 := l2
-	var previous *ListNode = nil
+
 	v1 := 0
 	v2 := 0
 	sum := 0
+	advance := 0
+
 	for cl1 != nil || cl2 != nil || advance != 0 {
 		if cl1 != nil {
 			v1 = cl1.Val
@@ -30,6 +33,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		current := new(ListNode)
 		current.Val = sum % 10
 		current.Next = nil
+
 		if result == nil {
 			previous = current
 			result = current
@@ -37,6 +41,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			previous.Next = current
 			previous = current
 		}
+
 		advance = sum / 10
 		if cl1 != nil {
 			cl1 = cl1.Next
@@ -45,5 +50,6 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			cl2 = cl2.Next
 		}
 	}
+
 	return result
 }
